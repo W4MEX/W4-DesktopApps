@@ -46,7 +46,7 @@ module.exports = function(grunt) {
                 overwrite: true,
                 replacements: [{
                     from: /__COMPANY_NAME__/g,
-                    to: process.env.COMPANY_NAME || 'Euro-Office'
+                    to: process.env.APP_TITLE_TEXT || process.env.COMPANY_NAME || 'Euro-Office'
                 }, {
                     from: /__HELP_URL__/g,
                     to: process.env.HELP_URL || 'https://github.com/euro-office'

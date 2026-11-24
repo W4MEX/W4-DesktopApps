@@ -16,6 +16,9 @@ FROM ubuntu:24.04 AS web-base
 #### DESKTOP-JS
 FROM web-base AS desktop-js
     ARG COMPANY_NAME
+    ARG THEME=euro-office
+    ARG APP_TITLE_TEXT
+    ARG HELP_URL=https://github.com/euro-office
     ARG BUILD_COMMITS
     ARG BUILD_DATE
 
@@ -24,6 +27,9 @@ FROM web-base AS desktop-js
     COPY web-apps/theme /web-apps/theme
 
     ENV COMPANY_NAME=${COMPANY_NAME}
+    ENV THEME=${THEME}
+    ENV APP_TITLE_TEXT=${APP_TITLE_TEXT}
+    ENV HELP_URL=${HELP_URL}
     ENV BUILD_COMMITS=${BUILD_COMMITS}
     ENV BUILD_DATE=${BUILD_DATE}
     ENV ABOUT_HTML_SCRIPT=/web-apps/build/about-html.mjs

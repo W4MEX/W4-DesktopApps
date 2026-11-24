@@ -1,4 +1,4 @@
-﻿; -- Installer Common --
+; -- Installer Common --
 
 #ifndef BRANDING_DIR
 #define BRANDING_DIR '.'
@@ -75,7 +75,7 @@ PrivilegesRequired        =admin
 AppMutex                  ={code:getAppMutex}
 ChangesAssociations       =yes
 ChangesEnvironment        =yes
-SetupMutex                =EuroOffice-DesktopEditors-Setup
+SetupMutex                =W4-Office-Setup
 
 #if Ver < EncodeVer(6,0,0) & ARCH == "x64"
 ArchitecturesAllowed              = x64
@@ -98,13 +98,13 @@ OutputBaseFileName                ={#OUTPUT_FILE}
 SignTool                  =byparam $p
 #endif
 
-SetupIconFile={#BRANDING_DIR}\..\..\win-linux\extras\projicons\res\icons\desktopeditors.ico
+SetupIconFile={#BRANDING_DIR}\..\..\win-linux\res\icons\w4-office.ico
 WizardStyle=classic dynamic
 WizardSizePercent=100
-WizardImageFile={#BRANDING_DIR}\res\WizImage-Light-*.png
-WizardImageFileDynamicDark={#BRANDING_DIR}\res\WizImage-Dark-*.png
-WizardSmallImageFile={#BRANDING_DIR}\res\WizSmallImage-Light-*.png
-WizardSmallImageFileDynamicDark={#BRANDING_DIR}\res\WizSmallImage-Dark-*.png
+WizardImageFile={#BRANDING_DIR}\res\w4\WizImage-Light-*.png
+WizardImageFileDynamicDark={#BRANDING_DIR}\res\w4\WizImage-Dark-*.png
+WizardSmallImageFile={#BRANDING_DIR}\res\w4\WizSmallImage-Light-*.png
+WizardSmallImageFileDynamicDark={#BRANDING_DIR}\res\w4\WizSmallImage-Dark-*.png
 #if PACKAGE_EDITION == "Enterprise"
 LicenseFile={#BRANDING_DIR}\..\common\license\commercial\LICENSE.rtf
 #else

@@ -58,11 +58,11 @@
 #define VER_LANG_ID                 0x0409
 #define VER_CHARSET_ID              1252
 
-#define VER_FILEDESCRIPTION_STR     "ONLYOFFICE Editors\0"
-#define VER_PRODUCTNAME_STR         "ONLYOFFICE Editors\0"
-#define VER_COMPANYNAME_STR         "Ascensio System SIA\0"
+#define VER_FILEDESCRIPTION_STR     "W4 Office\0"
+#define VER_PRODUCTNAME_STR         "W4 Office\0"
+#define VER_COMPANYNAME_STR         "W4\0"
 #define VER_LEGALCOPYRIGHT_STR      "© Ascensio System SIA, Euro-Office contributors " TO_STR(COPYRIGHT_YEAR) ". All rights reserved.\0"
-#define VER_COMPANYDOMAIN_STR       "www.onlyoffice.com\0"
+#define VER_COMPANYDOMAIN_STR       "https://github.com/W4MEX\0"
 
 #define VER_INTERNALNAME_STR        "AppIcons\0"
 #define VER_LEGALTRADEMARKS1_STR    "All rights reserved\0"
