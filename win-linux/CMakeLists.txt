@@ -128,7 +128,7 @@ endif()
 
 # 3. Definitions & Global Config
 add_definitions(-D__DONT_WRITE_IN_APP_TITLE)
-add_definitions(-DAPP_ICON_PATH="./res/icons/desktopeditors-eo.ico")
+add_definitions(-DAPP_ICON_PATH="./res/icons/w4-office.ico")
 add_definitions(-DCOPYRIGHT_YEAR=2026)
 
 # Handle Product Version from Environment
@@ -353,7 +353,7 @@ if(WIN32)
     )
     target_compile_definitions(projicons PRIVATE
         UNICODE _UNICODE
-        APP_USER_MODEL_ID="EuroOffice.Documents.5"
+        APP_USER_MODEL_ID="W4.Office.1"
     )
     target_link_libraries(projicons PRIVATE
         Qt${QT_VERSION_MAJOR}::Widgets
@@ -388,7 +388,7 @@ install(TARGETS
 if(WIN32)
     install(TARGETS projicons RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
     # Start menu / desktop shortcuts and the uninstall entry use {app}\app.ico
-    install(FILES res/icons/desktopeditors-eo.ico
+    install(FILES res/icons/w4-office.ico
         DESTINATION ${CMAKE_INSTALL_BINDIR}
         RENAME app.ico
     )
