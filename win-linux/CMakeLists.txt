@@ -445,9 +445,11 @@ set(EO_QT_MODULES
     Core Gui Widgets Svg PrintSupport OpenGL OpenGLWidgets Concurrent
     Multimedia MultimediaWidgets Network)
 if(NOT WIN32)
-    list(APPEND EO_QT_MODULES
-        DBus XcbQpa WaylandClient WlShellIntegration
-        Qml QmlMeta QmlModels QmlWorkerScript Quick)
+    list(APPEND EO_QT_MODULES DBus XcbQpa WaylandClient WlShellIntegration)
+    # The source-built Qt used on Rocky 8 excludes qtdeclarative.
+    if(EXISTS "${QT_ROOT}/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake")
+        list(APPEND EO_QT_MODULES Qml QmlMeta QmlModels QmlWorkerScript Quick)
+    endif()
 endif()
 
 # Plugin directories installed as a whole. Leaves out e.g. sqldrivers,
